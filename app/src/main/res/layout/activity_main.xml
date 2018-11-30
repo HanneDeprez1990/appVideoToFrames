@@ -13,27 +13,34 @@
 
 
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/lotus_119_small">
 
         <VideoView
             android:id="@+id/videoView"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp200"
-            android:layout_centerHorizontal="true"
-            android:layout_marginLeft="@dimen/dp20"
-            android:layout_marginRight="@dimen/dp20"
-            android:layout_marginTop="@dimen/dp5" />
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+            android:gravity="right" />
 
 
         <org.florescu.android.rangeseekbar.RangeSeekBar
             android:id="@+id/rangeSeekBar"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_below="@+id/videoView"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
             app:showLabels="false"
-            rsb:activeColor="#ED1C24"
-            rsb:textAboveThumbsColor="#000000" />
+            rsb:activeColor="#FFFFFF"
+            rsb:textAboveThumbsColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/tvLeft"
@@ -42,7 +49,7 @@
             android:layout_alignLeft="@+id/rangeSeekBar"
             android:layout_alignStart="@+id/rangeSeekBar"
             android:layout_below="@+id/rangeSeekBar"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/tvRight"
@@ -51,26 +58,31 @@
             android:layout_alignEnd="@+id/rangeSeekBar"
             android:layout_alignRight="@+id/rangeSeekBar"
             android:layout_below="@+id/rangeSeekBar"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/tvInstructions"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvRight"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="@dimen/dp5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-3dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="@dimen/dp5"
             android:gravity="center"
             android:text="@string/rangeSeekBarText"
-            android:textColor="#000000" />
+            android:textColor="#FFFFFF" />
 
         <TextView
             android:id="@+id/uploadVideo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
             android:layout_below="@+id/tvInstructions"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="215dp"
             android:background="@drawable/upload_video_selector"
             android:gravity="center"
             android:padding="@dimen/dp5"
@@ -78,33 +90,35 @@
             android:textColor="#FFFFFF"
             android:textSize="@dimen/sp16" />
 
-        <TableLayout
-            android:id="@+id/footer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@+id/uploadVideo"
-            android:layout_marginTop="@dimen/dp5"
-            android:gravity="center_horizontal|bottom"
-            android:orientation="horizontal">
-
-        </TableLayout>
-
         <TextView
             android:id="@+id/extractImages"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="60dp"
             android:layout_alignBottom="@+id/uploadVideo"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="95dp"
-            android:layout_marginRight="95dp"
+            android:layout_marginEnd="174dp"
+            android:layout_marginRight="174dp"
+            android:layout_marginBottom="1dp"
             android:background="@drawable/extract_images_selector"
             android:gravity="center"
             android:padding="@dimen/dp2"
             android:text="@string/extractImages"
             android:textColor="#FFFFFF"
             android:textSize="@dimen/sp16" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginBottom="0dp"
+            android:contentDescription="@string/app_name"
+            app:srcCompat="@drawable/logo_small_white" />
 
 
     </RelativeLayout>
